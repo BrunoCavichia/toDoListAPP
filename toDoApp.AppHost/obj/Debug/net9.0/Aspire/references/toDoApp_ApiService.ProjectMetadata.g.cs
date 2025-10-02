@@ -15,5 +15,5 @@ public class toDoApp_ApiService : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the toDoApp_ApiService project.
     /// </summary>
-    public string ProjectPath => """c:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ApiService\toDoApp.ApiService.csproj""";
+    public string ProjectPath => """C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ApiService\toDoApp.ApiService.csproj""";
 }

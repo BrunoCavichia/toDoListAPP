@@ -10,7 +10,7 @@ builder.AddProject<Projects.toDoApp_Web>("webfrontend")
     .WaitFor(apiService);
 
 
-builder.AddContainer("postgresql", "postgres:15")
-    .WithUrl("http://localhost:5432", "PostgreSQL");
+var postgres = builder.AddPostgres("postgres");
+var postgresdb = postgres.AddDatabase("postgresdb");
 
 builder.Build().Run();

@@ -17,15 +17,15 @@ using System.Reflection;
     "\\tools\\ext\\"))]
 [assembly: System.Reflection.AssemblyMetadata("dcpbinpath", ("C:\\Users\\BrunoCavichia\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\9.5.0" +
     "\\tools\\ext\\bin\\"))]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "c:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost")]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "toDoApp.AppHost.csproj")]
 [assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("C:\\Users\\BrunoCavichia\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\9.5.0\\tools\\A" +
     "spire.Dashboard.exe"))]
-[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "c:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\obj\\")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\obj\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5970f065830f127bfb018c78b376f5a9ab939fcd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fb5dcb08496c6230f3f081f6e447026777c910f")]
 [assembly: System.Reflection.AssemblyProductAttribute("toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

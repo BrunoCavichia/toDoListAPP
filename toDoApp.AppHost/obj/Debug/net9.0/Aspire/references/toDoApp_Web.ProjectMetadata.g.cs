@@ -15,5 +15,5 @@ public class toDoApp_Web : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the toDoApp_Web project.
     /// </summary>
-    public string ProjectPath => """c:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.Web\toDoApp.Web.csproj""";
+    public string ProjectPath => """C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.Web\toDoApp.Web.csproj""";
 }

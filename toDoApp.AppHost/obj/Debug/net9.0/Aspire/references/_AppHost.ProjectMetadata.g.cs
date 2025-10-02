@@ -17,5 +17,5 @@ public class toDoApp_AppHost
     /// <summary>
     /// The path to the Aspire Host project.
     /// </summary>
-    public static string ProjectPath => """c:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.AppHost""";
+    public static string ProjectPath => """C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.AppHost""";
 }

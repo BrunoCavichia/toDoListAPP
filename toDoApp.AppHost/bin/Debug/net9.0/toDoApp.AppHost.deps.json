@@ -10,6 +10,7 @@
         "dependencies": {
           "Aspire.Dashboard.Sdk.win-x64": "9.5.0",
           "Aspire.Hosting.AppHost": "9.5.0",
+          "Aspire.Hosting.Azure.PostgreSQL": "9.5.0",
           "Aspire.Hosting.Orchestration.win-x64": "9.5.0",
           "Npgsql": "9.0.3"
         },
@@ -126,7 +127,225 @@
           }
         }
       },
+      "Aspire.Hosting.Azure/9.5.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting": "9.5.0",
+          "Azure.Core": "1.47.3",
+          "Azure.Identity": "1.15.0",
+          "Azure.Provisioning": "1.3.0",
+          "Azure.Provisioning.KeyVault": "1.1.0",
+          "Azure.ResourceManager.Authorization": "1.1.5",
+          "Azure.ResourceManager.KeyVault": "1.3.2",
+          "Azure.ResourceManager.Resources": "1.11.1",
+          "Azure.Security.KeyVault.Secrets": "4.8.0",
+          "Google.Protobuf": "3.32.0",
+          "Grpc.AspNetCore": "2.71.0",
+          "Grpc.Net.ClientFactory": "2.71.0",
+          "Grpc.Tools": "2.72.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "17.0.14",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
+          "Microsoft.Extensions.Hosting": "9.0.9",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Http": "9.0.9",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Options": "9.0.9",
+          "Microsoft.Extensions.Primitives": "9.0.9",
+          "Newtonsoft.Json": "13.0.3",
+          "Polly.Core": "8.6.3",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.22.11",
+          "System.IO.Hashing": "9.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.Azure.dll": {
+            "assemblyVersion": "9.5.0.0",
+            "fileVersion": "9.500.25.47407"
+          }
+        },
+        "resources": {
+          "lib/net8.0/cs/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/de/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/es/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/fr/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/it/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/ja/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ko/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/pl/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pt-BR/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net8.0/ru/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/tr/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/zh-Hans/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hant/Aspire.Hosting.Azure.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Aspire.Hosting.Azure.KeyVault/9.5.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting.Azure": "9.5.0",
+          "Azure.Core": "1.47.3",
+          "Azure.Identity": "1.15.0",
+          "Azure.Provisioning": "1.3.0",
+          "Azure.Provisioning.KeyVault": "1.1.0",
+          "Azure.ResourceManager.Authorization": "1.1.5",
+          "Azure.ResourceManager.KeyVault": "1.3.2",
+          "Azure.ResourceManager.Resources": "1.11.1",
+          "Azure.Security.KeyVault.Secrets": "4.8.0",
+          "Google.Protobuf": "3.32.0",
+          "Grpc.AspNetCore": "2.71.0",
+          "Grpc.Net.ClientFactory": "2.71.0",
+          "Grpc.Tools": "2.72.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "17.0.14",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
+          "Microsoft.Extensions.Hosting": "9.0.9",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Http": "9.0.9",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Options": "9.0.9",
+          "Microsoft.Extensions.Primitives": "9.0.9",
+          "Newtonsoft.Json": "13.0.3",
+          "Polly.Core": "8.6.3",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.22.11",
+          "System.IO.Hashing": "9.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.Azure.KeyVault.dll": {
+            "assemblyVersion": "9.5.0.0",
+            "fileVersion": "9.500.25.47407"
+          }
+        }
+      },
+      "Aspire.Hosting.Azure.PostgreSQL/9.5.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.NpgSql": "9.0.0",
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting.Azure": "9.5.0",
+          "Aspire.Hosting.Azure.KeyVault": "9.5.0",
+          "Aspire.Hosting.PostgreSQL": "9.5.0",
+          "Azure.Core": "1.47.3",
+          "Azure.Identity": "1.15.0",
+          "Azure.Provisioning": "1.3.0",
+          "Azure.Provisioning.KeyVault": "1.1.0",
+          "Azure.Provisioning.PostgreSql": "1.1.1",
+          "Azure.ResourceManager.Authorization": "1.1.5",
+          "Azure.ResourceManager.KeyVault": "1.3.2",
+          "Azure.ResourceManager.Resources": "1.11.1",
+          "Azure.Security.KeyVault.Secrets": "4.8.0",
+          "Google.Protobuf": "3.32.0",
+          "Grpc.AspNetCore": "2.71.0",
+          "Grpc.Net.ClientFactory": "2.71.0",
+          "Grpc.Tools": "2.72.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "17.0.14",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
+          "Microsoft.Extensions.Hosting": "9.0.9",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Http": "9.0.9",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Options": "9.0.9",
+          "Microsoft.Extensions.Primitives": "9.0.9",
+          "Newtonsoft.Json": "13.0.3",
+          "Polly.Core": "8.6.3",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.22.11",
+          "System.IO.Hashing": "9.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.Azure.PostgreSQL.dll": {
+            "assemblyVersion": "9.5.0.0",
+            "fileVersion": "9.500.25.47407"
+          }
+        }
+      },
       "Aspire.Hosting.Orchestration.win-x64/9.5.0": {},
+      "Aspire.Hosting.PostgreSQL/9.5.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.NpgSql": "9.0.0",
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting": "9.5.0",
+          "Google.Protobuf": "3.32.0",
+          "Grpc.AspNetCore": "2.71.0",
+          "Grpc.Net.ClientFactory": "2.71.0",
+          "Grpc.Tools": "2.72.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "17.0.14",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
+          "Microsoft.Extensions.Hosting": "9.0.9",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Http": "9.0.9",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Options": "9.0.9",
+          "Microsoft.Extensions.Primitives": "9.0.9",
+          "Newtonsoft.Json": "13.0.3",
+          "Polly.Core": "8.6.3",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.22.11",
+          "System.IO.Hashing": "9.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.PostgreSQL.dll": {
+            "assemblyVersion": "9.5.0.0",
+            "fileVersion": "9.500.25.47407"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.NpgSql/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
+          "Npgsql": "9.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.NpgSql.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
       "AspNetCore.HealthChecks.Uris/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
@@ -136,6 +355,125 @@
           "lib/net8.0/HealthChecks.Uris.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "Azure.Core/1.47.3": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
+          "System.ClientModel": "1.6.1",
+          "System.Memory.Data": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Core.dll": {
+            "assemblyVersion": "1.47.3.0",
+            "fileVersion": "1.4700.325.42004"
+          }
+        }
+      },
+      "Azure.Identity/1.15.0": {
+        "dependencies": {
+          "Azure.Core": "1.47.3",
+          "Microsoft.Identity.Client": "4.73.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "4.73.1"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Identity.dll": {
+            "assemblyVersion": "1.15.0.0",
+            "fileVersion": "1.1500.25.40803"
+          }
+        }
+      },
+      "Azure.Provisioning/1.3.0": {
+        "dependencies": {
+          "Azure.Core": "1.47.3"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Provisioning.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.300.25.38101"
+          }
+        }
+      },
+      "Azure.Provisioning.KeyVault/1.1.0": {
+        "dependencies": {
+          "Azure.Core": "1.47.3",
+          "Azure.Provisioning": "1.3.0"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Provisioning.KeyVault.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.100.25.31702"
+          }
+        }
+      },
+      "Azure.Provisioning.PostgreSql/1.1.1": {
+        "dependencies": {
+          "Azure.Core": "1.47.3",
+          "Azure.Provisioning": "1.3.0"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Provisioning.PostgreSql.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.100.125.32403"
+          }
+        }
+      },
+      "Azure.ResourceManager/1.13.2": {
+        "dependencies": {
+          "Azure.Core": "1.47.3"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.ResourceManager.dll": {
+            "assemblyVersion": "1.13.2.0",
+            "fileVersion": "1.1300.225.36803"
+          }
+        }
+      },
+      "Azure.ResourceManager.Authorization/1.1.5": {
+        "dependencies": {
+          "Azure.Core": "1.47.3",
+          "Azure.ResourceManager": "1.13.2"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.ResourceManager.Authorization.dll": {
+            "assemblyVersion": "1.1.5.0",
+            "fileVersion": "1.100.525.37801"
+          }
+        }
+      },
+      "Azure.ResourceManager.KeyVault/1.3.2": {
+        "dependencies": {
+          "Azure.Core": "1.47.3",
+          "Azure.ResourceManager": "1.13.2"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.ResourceManager.KeyVault.dll": {
+            "assemblyVersion": "1.3.2.0",
+            "fileVersion": "1.300.225.20202"
+          }
+        }
+      },
+      "Azure.ResourceManager.Resources/1.11.1": {
+        "dependencies": {
+          "Azure.Core": "1.47.3",
+          "Azure.ResourceManager": "1.13.2"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.ResourceManager.Resources.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.1100.125.42001"
+          }
+        }
+      },
+      "Azure.Security.KeyVault.Secrets/4.8.0": {
+        "dependencies": {
+          "Azure.Core": "1.47.3"
+        },
+        "runtime": {
+          "lib/net8.0/Azure.Security.KeyVault.Secrets.dll": {
+            "assemblyVersion": "4.8.0.0",
+            "fileVersion": "4.800.25.31702"
           }
         }
       },
@@ -297,6 +635,14 @@
           "lib/netstandard2.0/MessagePack.Annotations.dll": {
             "assemblyVersion": "2.5.0.0",
             "fileVersion": "2.5.192.54228"
+          }
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -697,6 +1043,38 @@
           }
         }
       },
+      "Microsoft.Identity.Client/4.73.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.35.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Identity.Client.dll": {
+            "assemblyVersion": "4.73.1.0",
+            "fileVersion": "4.73.1.0"
+          }
+        }
+      },
+      "Microsoft.Identity.Client.Extensions.Msal/4.73.1": {
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.73.1",
+          "System.Security.Cryptography.ProtectedData": "4.5.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
+            "assemblyVersion": "4.73.1.0",
+            "fileVersion": "4.73.1.0"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/6.35.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "6.35.0.0",
+            "fileVersion": "6.35.0.41201"
+          }
+        }
+      },
       "Microsoft.NET.StringTools/17.6.3": {
         "runtime": {
           "lib/net7.0/Microsoft.NET.StringTools.dll": {
@@ -914,6 +1292,23 @@
           }
         }
       },
+      "System.ClientModel/1.6.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+          "System.Memory.Data": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/System.ClientModel.dll": {
+            "assemblyVersion": "1.6.1.0",
+            "fileVersion": "1.600.125.41908"
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
       "System.Diagnostics.EventLog/9.0.9": {
         "runtime": {
           "lib/net9.0/System.Diagnostics.EventLog.dll": {
@@ -939,6 +1334,31 @@
         }
       },
       "System.IO.Pipelines/8.0.0": {},
+      "System.Memory.Data/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.Memory.Data.dll": {
+            "assemblyVersion": "8.0.0.1",
+            "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "YamlDotNet/16.3.0": {
         "runtime": {
           "lib/net8.0/YamlDotNet.dll": {
@@ -976,6 +1396,27 @@
       "path": "aspire.hosting.apphost/9.5.0",
       "hashPath": "aspire.hosting.apphost.9.5.0.nupkg.sha512"
     },
+    "Aspire.Hosting.Azure/9.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YUR6AIliE41s2cq2J8N6q0HXQtXL2mDeoeI79FnGLaqX8PwWsyRAr7f8U334uswRquxh5UH8I8+WC5pTfLNHfw==",
+      "path": "aspire.hosting.azure/9.5.0",
+      "hashPath": "aspire.hosting.azure.9.5.0.nupkg.sha512"
+    },
+    "Aspire.Hosting.Azure.KeyVault/9.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+rIrucBf7esR50eJzni+cR5Dxvy5pz7d2ZXmVr/Mzd1rW14vQQsnvKne/Rx0df4GPqsPYX3hcuARtMk6kJTtoQ==",
+      "path": "aspire.hosting.azure.keyvault/9.5.0",
+      "hashPath": "aspire.hosting.azure.keyvault.9.5.0.nupkg.sha512"
+    },
+    "Aspire.Hosting.Azure.PostgreSQL/9.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rWzmIpbkbxI0bqqqGWa+58aBtxU0MaYBeVyRvPtsZrRaAbMlForRBcmBwmrfZ6QclGtAuNyU6HylGEiE8EXlZA==",
+      "path": "aspire.hosting.azure.postgresql/9.5.0",
+      "hashPath": "aspire.hosting.azure.postgresql.9.5.0.nupkg.sha512"
+    },
     "Aspire.Hosting.Orchestration.win-x64/9.5.0": {
       "type": "package",
       "serviceable": true,
@@ -983,12 +1424,96 @@
       "path": "aspire.hosting.orchestration.win-x64/9.5.0",
       "hashPath": "aspire.hosting.orchestration.win-x64.9.5.0.nupkg.sha512"
     },
+    "Aspire.Hosting.PostgreSQL/9.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ju3YWjjILIFmgtoM+xJ8wxGatgJSmNqkuJBrVEa9wbNw/RMgpRer5ZeQAm2Tsc8jtjonJQl5zYTJSoafv1q8dw==",
+      "path": "aspire.hosting.postgresql/9.5.0",
+      "hashPath": "aspire.hosting.postgresql.9.5.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.NpgSql/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-npc58/AD5zuVxERdhCl2Kb7WnL37mwX42SJcXIwvmEig0/dugOLg3SIwtfvvh3TnvTwR/sk5LYNkkPaBdks61A==",
+      "path": "aspnetcore.healthchecks.npgsql/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512"
+    },
     "AspNetCore.HealthChecks.Uris/9.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-XYdNlA437KeF8p9qOpZFyNqAN+c0FXt/JjTvzH/Qans0q0O3pPE8KPnn39ucQQjR/Roum1vLTP3kXiUs8VHyuA==",
       "path": "aspnetcore.healthchecks.uris/9.0.0",
       "hashPath": "aspnetcore.healthchecks.uris.9.0.0.nupkg.sha512"
+    },
+    "Azure.Core/1.47.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u/uCNtUWT+Q/Is7/PAMy3KP9kq5vY5klRnyAvRxO/kEa5OnV3/X5lHlCajNANC7vmej6jAqceqLBJNO/VyCKzg==",
+      "path": "azure.core/1.47.3",
+      "hashPath": "azure.core.1.47.3.nupkg.sha512"
+    },
+    "Azure.Identity/1.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tvJVy5s8VdsAYHIcBw1KrwDTcTWr2K5fG5o/xEJ2zU3+QUViDx/utut83+fGoB/bcBspxuC6wG650GwAUkU2UQ==",
+      "path": "azure.identity/1.15.0",
+      "hashPath": "azure.identity.1.15.0.nupkg.sha512"
+    },
+    "Azure.Provisioning/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XwvbAY2+927P3y6ATHtucr2FWJ4LvpmQQa6kM9n6eRUAta9lmQ2aLggvnOqZcjIHEuKNTHIkE4BHTP4eNkzZTg==",
+      "path": "azure.provisioning/1.3.0",
+      "hashPath": "azure.provisioning.1.3.0.nupkg.sha512"
+    },
+    "Azure.Provisioning.KeyVault/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n8SCJONrEU3w9lq/ZiQkxZ0L+Sv6RL2M95LSVYnwlYe84ww6jpo/djlfd835dh5cQvVrHgETi3UnRUcZn89J0w==",
+      "path": "azure.provisioning.keyvault/1.1.0",
+      "hashPath": "azure.provisioning.keyvault.1.1.0.nupkg.sha512"
+    },
+    "Azure.Provisioning.PostgreSql/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nAcxs1iRtbZHSwxKliHQz7GCQiNDhkUvL7tzLiKc7R2Kp7sO1k5Q6k8B77Ka2ul7eMHSmp5wtSmZiq8t2gqg5A==",
+      "path": "azure.provisioning.postgresql/1.1.1",
+      "hashPath": "azure.provisioning.postgresql.1.1.1.nupkg.sha512"
+    },
+    "Azure.ResourceManager/1.13.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+jFLIfQgrVjxMpFClUBS8/zPLiRMJ49UgdkrFH/wU74DCABmZs71n1K9sq6MuAz6hR0wJJsDP4Pxaz0iVwyzVg==",
+      "path": "azure.resourcemanager/1.13.2",
+      "hashPath": "azure.resourcemanager.1.13.2.nupkg.sha512"
+    },
+    "Azure.ResourceManager.Authorization/1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K3Bl0oMGgxD8zxj9EDDIkc5HOiEJo7aYTKMP+3S1gsAXsEgl3X/j2K110B1p7QUv7XPjrEtgs3F8gJjbtwszDA==",
+      "path": "azure.resourcemanager.authorization/1.1.5",
+      "hashPath": "azure.resourcemanager.authorization.1.1.5.nupkg.sha512"
+    },
+    "Azure.ResourceManager.KeyVault/1.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hA1jiJXyUmyiUjM1RJ6D8e2mL2K2+mHjizuIw1l6K7ujueoYa49AYNoGUAVK4SSKM5OIxTGQWz2TtYaR4PJl3A==",
+      "path": "azure.resourcemanager.keyvault/1.3.2",
+      "hashPath": "azure.resourcemanager.keyvault.1.3.2.nupkg.sha512"
+    },
+    "Azure.ResourceManager.Resources/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mhlrQWnG0Ic1WKMYuFWO2YF+u3tR8eqqHJgIyGxGEkUCRVUCPFOfQTQP7YhS7qkfzJQIpBvjZIViZg6tz+XI9w==",
+      "path": "azure.resourcemanager.resources/1.11.1",
+      "hashPath": "azure.resourcemanager.resources.1.11.1.nupkg.sha512"
+    },
+    "Azure.Security.KeyVault.Secrets/4.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tmcIgo+de2K5+PTBRNlnFLQFbmSoyuT9RpDr5MwKS6mIfNxLPQpARkRAP91r3tmeiJ9j/UCO0F+hTlk1Bk7HNQ==",
+      "path": "azure.security.keyvault.secrets/4.8.0",
+      "hashPath": "azure.security.keyvault.secrets.4.8.0.nupkg.sha512"
     },
     "Fractions/7.3.0": {
       "type": "package",
@@ -1108,6 +1633,13 @@
       "sha512": "sha512-jaJuwcgovWIZ8Zysdyf3b7b34/BrADw4v82GaEZymUhDd3ScMPrYd/cttekeDteJJPXseJxp04yTIcxiVUjTWg==",
       "path": "messagepack.annotations/2.5.192",
       "hashPath": "messagepack.annotations.2.5.192.nupkg.sha512"
+    },
+    "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
+      "path": "microsoft.bcl.asyncinterfaces/8.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.9": {
       "type": "package",
@@ -1319,6 +1851,27 @@
       "path": "microsoft.extensions.primitives/9.0.9",
       "hashPath": "microsoft.extensions.primitives.9.0.9.nupkg.sha512"
     },
+    "Microsoft.Identity.Client/4.73.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NnDLS8QwYqO5ZZecL2oioi1LUqjh5Ewk4bMLzbgiXJbQmZhDLtKwLxL3DpGMlQAJ2G4KgEnvGPKa+OOgffeJbw==",
+      "path": "microsoft.identity.client/4.73.1",
+      "hashPath": "microsoft.identity.client.4.73.1.nupkg.sha512"
+    },
+    "Microsoft.Identity.Client.Extensions.Msal/4.73.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xDztAiV2F0wI0W8FLKv5cbaBefyLD6JVaAsvgSN7bjWNCzGYzHbcOEIP5s4TJXUpQzMfUyBsFl1mC6Zmgpz0PQ==",
+      "path": "microsoft.identity.client.extensions.msal/4.73.1",
+      "hashPath": "microsoft.identity.client.extensions.msal.4.73.1.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Abstractions/6.35.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xuR8E4Rd96M41CnUSCiOJ2DBh+z+zQSmyrYHdYhD6K4fXBcQGVnRCFQ0efROUYpP+p0zC1BLKr0JRpVuujTZSg==",
+      "path": "microsoft.identitymodel.abstractions/6.35.0",
+      "hashPath": "microsoft.identitymodel.abstractions.6.35.0.nupkg.sha512"
+    },
     "Microsoft.NET.StringTools/17.6.3": {
       "type": "package",
       "serviceable": true,
@@ -1382,6 +1935,20 @@
       "path": "streamjsonrpc/2.22.11",
       "hashPath": "streamjsonrpc.2.22.11.nupkg.sha512"
     },
+    "System.ClientModel/1.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xcHHhDqB5MnOOY8yIn64Vzp6gtBEs6k5J1hluG04CrShSvQNXOx4PSDs7wJiXLDidlY/FZJmxJdKTKskyJwjvw==",
+      "path": "system.clientmodel/1.6.1",
+      "hashPath": "system.clientmodel.1.6.1.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
+      "path": "system.diagnostics.diagnosticsource/6.0.1",
+      "hashPath": "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512"
+    },
     "System.Diagnostics.EventLog/9.0.9": {
       "type": "package",
       "serviceable": true,
@@ -1402,6 +1969,27 @@
       "sha512": "sha512-FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
       "path": "system.io.pipelines/8.0.0",
       "hashPath": "system.io.pipelines.8.0.0.nupkg.sha512"
+    },
+    "System.Memory.Data/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BVYuec3jV23EMRDeR7Dr1/qhx7369dZzJ9IWy2xylvb4YfXsrUxspWc4UWYid/tj4zZK58uGZqn2WQiaDMhmAg==",
+      "path": "system.memory.data/8.0.1",
+      "hashPath": "system.memory.data.8.0.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
     },
     "YamlDotNet/16.3.0": {
       "type": "package",
