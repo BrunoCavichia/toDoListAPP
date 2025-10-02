@@ -56,10 +56,18 @@
               "target": "Package",
               "version": "[9.5.0, )"
             },
+            "Aspire.Hosting.Azure.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.5.0, )"
+            },
             "Aspire.Hosting.Orchestration.win-x64": {
               "target": "Package",
               "version": "[9.5.0, )",
               "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             }
           },
           "imports": [

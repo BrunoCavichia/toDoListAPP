@@ -1,0 +1,13 @@
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\bin\Debug\net9.0\toDoApp.ServiceDefaults.deps.json
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\bin\Debug\net9.0\toDoApp.ServiceDefaults.dll
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\bin\Debug\net9.0\toDoApp.ServiceDefaults.pdb
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.AssemblyInfo.cs
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.sourcelink.json
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.dll
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\refint\toDoApp.ServiceDefaults.dll
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\toDoApp.ServiceDefaults.pdb
+C:\Users\BrunoCavichia\Desktop\toDoApp\toDoApp.ServiceDefaults\obj\Debug\net9.0\ref\toDoApp.ServiceDefaults.dll
