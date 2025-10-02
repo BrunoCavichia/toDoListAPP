@@ -10,7 +10,8 @@ builder.AddProject<Projects.toDoApp_Web>("webfrontend")
     .WaitFor(apiService);
 
 
-var postgres = builder.AddPostgres("postgres");
+var postgres = builder.AddPostgres("postgres")
+                        .WithPgAdmin();
 var postgresdb = postgres.AddDatabase("postgresdb");
 
 builder.Build().Run();
