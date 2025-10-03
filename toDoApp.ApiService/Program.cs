@@ -1,7 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using toDoApp.ApiService.Data;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Cargar variables de entorno desde archivo .env en la raíz del proyecto
+Env.Load();
+
+var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("La variable de entorno CONNECTION_STRING no está definida.");
+}
 
 // Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
@@ -9,10 +20,10 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddProblemDetails();
 builder.Services.AddOpenApi();
-builder.Services.AddControllers(); 
+builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql("Host=localhost;Port=5432;Database=postgresdb;Username=postgres;Password=zWhTXt9C9UXfW-0aVD+wp*"));
+    options.UseNpgsql(connectionString));
 
 // **Configuración de CORS:**
 builder.Services.AddCors(options =>
@@ -21,7 +32,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
-                "http://localhost:3000"  // <--- AÑADE este puerto del frontend
+                "http://localhost:3000"  // <--- puerto frontend
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
@@ -41,7 +52,11 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
+string[] summaries = new[]
+{
+    "Freezing", "Bracing", "Chilly", "Cool", "Mild",
+    "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+};
 
 app.MapGet("/weatherforecast", () =>
 {
@@ -58,7 +73,7 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast");
 
 app.MapDefaultEndpoints();
-app.MapControllers(); 
+app.MapControllers();
 
 app.Run();
 

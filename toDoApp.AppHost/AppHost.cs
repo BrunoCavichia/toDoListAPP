@@ -9,8 +9,6 @@ var postgres = builder.AddPostgres("postgres")
 
 var postgresdb = postgres.AddDatabase("postgresdb");
 
-
-
 builder.AddViteApp("frontend", packageManager: "yarn")
        .WithEndpoint("http", endpoint => endpoint.Port = 3000)
           .WithYarnPackageInstallation();
