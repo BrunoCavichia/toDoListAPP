@@ -11,11 +11,27 @@ builder.Services.AddProblemDetails();
 builder.Services.AddOpenApi();
 builder.Services.AddControllers(); 
 
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql("Host=localhost;Port=55745;Database=postgres;Username=postgres;Password=zWhTXt9C9UXfW-0aVD+wp*"));
+    options.UseNpgsql("Host=localhost;Port=5432;Database=postgresdb;Username=postgres;Password=zWhTXt9C9UXfW-0aVD+wp*"));
+
+// **Configuración de CORS:**
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins(
+                "http://localhost:3000"  // <--- AÑADE este puerto del frontend
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
+
+// **Habilita CORS ANTES que el manejador de excepciones**
+app.UseCors("AllowFrontend");
 
 // Configure the HTTP request pipeline.
 app.UseExceptionHandler();
@@ -24,7 +40,6 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
 
 string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
 

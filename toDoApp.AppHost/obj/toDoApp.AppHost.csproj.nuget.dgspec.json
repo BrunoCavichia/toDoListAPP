@@ -65,6 +65,10 @@
               "version": "[9.5.0, )",
               "autoReferenced": true
             },
+            "CommunityToolkit.Aspire.Hosting.NodeJS.Extensions": {
+              "target": "Package",
+              "version": "[9.8.0, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[9.0.3, )"

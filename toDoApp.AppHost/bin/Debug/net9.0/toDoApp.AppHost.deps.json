@@ -12,6 +12,7 @@
           "Aspire.Hosting.AppHost": "9.5.0",
           "Aspire.Hosting.Azure.PostgreSQL": "9.5.0",
           "Aspire.Hosting.Orchestration.win-x64": "9.5.0",
+          "CommunityToolkit.Aspire.Hosting.NodeJS.Extensions": "9.8.0",
           "Npgsql": "9.0.3"
         },
         "runtime": {
@@ -298,6 +299,40 @@
           }
         }
       },
+      "Aspire.Hosting.NodeJs/9.5.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting": "9.5.0",
+          "Google.Protobuf": "3.32.0",
+          "Grpc.AspNetCore": "2.71.0",
+          "Grpc.Net.ClientFactory": "2.71.0",
+          "Grpc.Tools": "2.72.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "17.0.14",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.9",
+          "Microsoft.Extensions.Hosting": "9.0.9",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Http": "9.0.9",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Options": "9.0.9",
+          "Microsoft.Extensions.Primitives": "9.0.9",
+          "Newtonsoft.Json": "13.0.3",
+          "Polly.Core": "8.6.3",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.22.11",
+          "System.IO.Hashing": "9.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.NodeJs.dll": {
+            "assemblyVersion": "9.5.0.0",
+            "fileVersion": "9.500.25.47407"
+          }
+        }
+      },
       "Aspire.Hosting.Orchestration.win-x64/9.5.0": {},
       "Aspire.Hosting.PostgreSQL/9.5.0": {
         "dependencies": {
@@ -474,6 +509,18 @@
           "lib/net8.0/Azure.Security.KeyVault.Secrets.dll": {
             "assemblyVersion": "4.8.0.0",
             "fileVersion": "4.800.25.31702"
+          }
+        }
+      },
+      "CommunityToolkit.Aspire.Hosting.NodeJS.Extensions/9.8.0": {
+        "dependencies": {
+          "Aspire.Hosting": "9.5.0",
+          "Aspire.Hosting.NodeJs": "9.5.0"
+        },
+        "runtime": {
+          "lib/net9.0/CommunityToolkit.Aspire.Hosting.NodeJS.Extensions.dll": {
+            "assemblyVersion": "9.8.0.0",
+            "fileVersion": "9.8.0.0"
           }
         }
       },
@@ -1417,6 +1464,13 @@
       "path": "aspire.hosting.azure.postgresql/9.5.0",
       "hashPath": "aspire.hosting.azure.postgresql.9.5.0.nupkg.sha512"
     },
+    "Aspire.Hosting.NodeJs/9.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YbOQcKMSE3CTsXecJQesqU5Iqm8DlLr9thEgjNY8iIN/G7ZysMJGp9Dro9jp6WcOQhC8l2+5HSU/gXm2AoR1JA==",
+      "path": "aspire.hosting.nodejs/9.5.0",
+      "hashPath": "aspire.hosting.nodejs.9.5.0.nupkg.sha512"
+    },
     "Aspire.Hosting.Orchestration.win-x64/9.5.0": {
       "type": "package",
       "serviceable": true,
@@ -1514,6 +1568,13 @@
       "sha512": "sha512-tmcIgo+de2K5+PTBRNlnFLQFbmSoyuT9RpDr5MwKS6mIfNxLPQpARkRAP91r3tmeiJ9j/UCO0F+hTlk1Bk7HNQ==",
       "path": "azure.security.keyvault.secrets/4.8.0",
       "hashPath": "azure.security.keyvault.secrets.4.8.0.nupkg.sha512"
+    },
+    "CommunityToolkit.Aspire.Hosting.NodeJS.Extensions/9.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66WxVMbUMOiNY0DjVH6E7xKvgLr0A0GkjudoNMsp4Hye15+8LKoCB1PaU/MFwVFUf5Z0IcwO4+wd03ys0IH/dQ==",
+      "path": "communitytoolkit.aspire.hosting.nodejs.extensions/9.8.0",
+      "hashPath": "communitytoolkit.aspire.hosting.nodejs.extensions.9.8.0.nupkg.sha512"
     },
     "Fractions/7.3.0": {
       "type": "package",

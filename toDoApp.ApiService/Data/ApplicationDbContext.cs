@@ -11,5 +11,13 @@ namespace toDoApp.ApiService.Data
         }
 
         public DbSet<TodoItem> TodoItems { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+   
+            modelBuilder.Entity<TodoItem>().ToTable("TodoItem");
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace toDoApp.ApiService.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
-            optionsBuilder.UseNpgsql("Host=localhost;Port=55745;Database=postgres;Username=postgres;Password=zWhTXt9C9UXfW-0aVD+wp*");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=postgresdb;Username=postgres;Password=zWhTXt9C9UXfW-0aVD+wp*");
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }

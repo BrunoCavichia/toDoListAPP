@@ -3,15 +3,17 @@ var builder = DistributedApplication.CreateBuilder(args);
 var apiService = builder.AddProject<Projects.toDoApp_ApiService>("apiservice")
     .WithHttpHealthCheck("/health");
 
-builder.AddProject<Projects.toDoApp_Web>("webfrontend")
-    .WithExternalHttpEndpoints()
-    .WithHttpHealthCheck("/health")
-    .WithReference(apiService)
-    .WaitFor(apiService);
-
-
 var postgres = builder.AddPostgres("postgres")
-                        .WithPgAdmin();
+                      .WithHostPort(5432)
+                      .WithLifetime(ContainerLifetime.Persistent);
+
 var postgresdb = postgres.AddDatabase("postgresdb");
 
+
+
+builder.AddViteApp("frontend", packageManager: "yarn")
+       .WithEndpoint("http", endpoint => endpoint.Port = 3000)
+          .WithYarnPackageInstallation();
+
 builder.Build().Run();
+

@@ -41,7 +41,7 @@ namespace toDoApp.ApiService.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TodoItems");
+                    b.ToTable("TodoItem", (string)null);
                 });
 #pragma warning restore 612, 618
         }
