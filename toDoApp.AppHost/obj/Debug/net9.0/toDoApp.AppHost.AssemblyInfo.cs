@@ -25,7 +25,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a5b76763c216f8e07da8db013472c4f18ab4c0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a5ad390c1a4d699fb4388ce2c65d23bfc8cfc3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("toDoApp.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
