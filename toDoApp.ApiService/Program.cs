@@ -1,18 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using toDoApp.ApiService.Data;
-using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Cargar variables de entorno desde archivo .env en la raíz del proyecto
-Env.Load();
-
-var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
-
-if (string.IsNullOrEmpty(connectionString))
-{
-    throw new InvalidOperationException("La variable de entorno CONNECTION_STRING no está definida.");
-}
 
 // Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
@@ -22,8 +13,12 @@ builder.Services.AddProblemDetails();
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
+builder.AddNpgsqlDbContext<ApplicationDbContext>(connectionName: "postgresdb");
+
+
+
+
+
 
 // **Configuración de CORS:**
 builder.Services.AddCors(options =>
@@ -40,6 +35,7 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
 
 // **Habilita CORS ANTES que el manejador de excepciones**
 app.UseCors("AllowFrontend");
