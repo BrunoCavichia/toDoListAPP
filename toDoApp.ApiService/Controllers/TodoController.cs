@@ -6,7 +6,7 @@ using toDoApp.ApiService.Models;
 namespace toDoApp.ApiService.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class TodoController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
