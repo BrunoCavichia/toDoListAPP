@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("toDoApp.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8850cc6711a1b85e4ee5b475f6d25e3a5c793ea5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d11b0cde32d4125b6827d37b0cd0f0ffe2aedd94")]
 [assembly: System.Reflection.AssemblyProductAttribute("toDoApp.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("toDoApp.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

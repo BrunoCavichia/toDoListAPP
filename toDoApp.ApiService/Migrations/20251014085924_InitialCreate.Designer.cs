@@ -12,8 +12,8 @@ using toDoApp.ApiService.Data;
 namespace toDoApp.ApiService.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251003094422_MapTodoItemTable")]
-    partial class MapTodoItemTable
+    [Migration("20251014085924_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace toDoApp.ApiService.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TodoItem", (string)null);
+                    b.ToTable("todoitems", (string)null);
                 });
 #pragma warning restore 612, 618
         }

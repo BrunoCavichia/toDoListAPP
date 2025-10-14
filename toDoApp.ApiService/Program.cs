@@ -19,7 +19,6 @@ builder.AddNpgsqlDbContext<ApplicationDbContext>(connectionName: "postgresdb");
 
 
 
-
 // **Configuración de CORS:**
 builder.Services.AddCors(options =>
 {

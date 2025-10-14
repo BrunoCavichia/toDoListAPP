@@ -8,6 +8,7 @@ import {
   putTodoByIdMutation,
 } from "./client/@tanstack/react-query.gen";
 import type { TodoItem } from "./client";
+import { body } from "framer-motion/client";
 
 function App() {
   const queryClient = useQueryClient();
@@ -26,8 +27,11 @@ function App() {
   });
 
   const addTodoMutation = useMutation({
-    ...postTodoMutation(),
+    //creamos una constante llamada addTodoMutation que va a contener la llamada a useMutation
+
+    ...postTodoMutation(), //con el spread obtenemos la llamada al metodo creado por heyapi
     onSuccess: () =>
+      //en caso de exito, lo que hacemos es obtener la key especifica de esta task e invlaidamos las queries para forzar a que si hay un cambio se refresque.
       queryClient.invalidateQueries({ queryKey: getTodosOptionsQueryKey }),
   });
 
@@ -45,13 +49,16 @@ function App() {
   });
 
   const handleAdd = () => {
+    //creamos una constante llamada HandleAdd
     const newTodoItem: TodoItem = {
+      //dentro tendra otra constante llamada newTodoiTEM QUE SERA UN Objeto de la clase todoItem, dentro le pasamos los campos de dicha clase
       title: newTodo,
       isCompleted: false,
     };
 
-    if (!newTodo.trim()) return;
+    if (!newTodo.trim()) return; //si  no hay espacios return
     addTodoMutation.mutate({
+      // sino llamamos a la constante que creamos arriba con el metodo mutate, dentro le pasamos el body y seteamos el new todo con "" (vacio);
       body: newTodoItem,
     });
     setNewTodo("");
@@ -81,6 +88,26 @@ function App() {
       path: {
         id,
       },
+    });
+  };
+
+  const handleToggleAll = () => {
+    // Determinar si al menos un todo NO está completado
+    const shouldCompleteAll = todos.some((todo) => !todo.isCompleted);
+
+    // Iterar sobre todos los todos
+    todos.forEach((todo) => {
+      // Crear objeto con estado actualizado
+      const todoItemToUpdate: TodoItem = {
+        ...todo,
+        isCompleted: shouldCompleteAll, // si hay alguno incompleto, marcar todos; si todos completos, desmarcar todos
+      };
+
+      // Llamar a la mutación para cada todo
+      toggleTodoMutation.mutate({
+        path: { id: todo.id ?? 0 },
+        body: todoItemToUpdate,
+      });
     });
   };
 
@@ -135,6 +162,20 @@ function App() {
           </motion.button>
         </section>
 
+        <label className="flex items-center gap-4 mb-4 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={todos.every((todo) => todo.isCompleted)}
+            onChange={() => handleToggleAll()}
+            className="h-5 w-5 accent-blue-600"
+          />
+          <span className="text-lg font-medium">
+            {todos.every((todo) => todo.isCompleted)
+              ? "Desmarcar todos"
+              : "Marcar todos"}
+          </span>
+        </label>
+
         <ul className="space-y-4">
           {todos.length === 0 ? (
             <motion.li
@@ -174,6 +215,7 @@ function App() {
                       {todo.title}
                     </span>
                   </label>
+
                   <motion.button
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
