@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\toDoApp.AppHost.csproj": {}
+    "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.Apphost\\toDoApp.AppHost.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\toDoApp.AppHost.csproj": {
+    "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.Apphost\\toDoApp.AppHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\toDoApp.AppHost.csproj",
+        "projectUniqueName": "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.Apphost\\toDoApp.AppHost.csproj",
         "projectName": "toDoApp.AppHost",
-        "projectPath": "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\toDoApp.AppHost.csproj",
+        "projectPath": "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.Apphost\\toDoApp.AppHost.csproj",
         "packagesPath": "C:\\Users\\BrunoCavichia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.AppHost\\obj\\",
+        "outputPath": "C:\\Users\\BrunoCavichia\\Desktop\\toDoApp\\toDoApp.Apphost\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

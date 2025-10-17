@@ -3,7 +3,7 @@ using toDoApp.ApiService.Models;
 
 namespace toDoApp.ApiService.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext //creamos una clase publica  que hereda desde DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }

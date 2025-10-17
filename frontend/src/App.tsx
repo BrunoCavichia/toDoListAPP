@@ -8,7 +8,6 @@ import {
   putTodoByIdMutation,
 } from "./client/@tanstack/react-query.gen";
 import type { TodoItem } from "./client";
-import { body } from "framer-motion/client";
 
 function App() {
   const queryClient = useQueryClient();
