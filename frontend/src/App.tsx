@@ -12,7 +12,7 @@ import { putTodoToggleAll, type TodoItem } from "./client";
 function App() {
   const queryClient = useQueryClient();
   const [newTodo, setNewTodo] = useState("");
-
+  const [errorMsg, seterrorMsg] = useState("");
   const getTodosOptions = getTodoOptions();
   const getTodosOptionsQueryKey = getTodosOptions.queryKey;
 
@@ -61,7 +61,12 @@ function App() {
       isCompleted: false,
     };
 
-    if (!newTodo.trim()) return; //si  no hay espacios return
+    if (!newTodo.trim()) {
+      seterrorMsg("No puedes agregar tareas vacias");
+      return;
+    }
+
+    seterrorMsg("");
     addTodoMutation.mutate({
       // sino llamamos a la constante que creamos arriba con el metodo mutate, dentro le pasamos el body y seteamos el new todo con "" (vacio);
       body: newTodoItem,
@@ -136,7 +141,7 @@ function App() {
           </motion.div>
         )}
 
-        <section className="flex gap-4 mb-10">
+        <section className="flex flex-col gap-4 mb-10">
           <input
             type="text"
             placeholder="Agrega una nueva tarea..."
@@ -153,6 +158,7 @@ function App() {
           >
             Agregar
           </motion.button>
+          {errorMsg && <p className="text-red-500">{errorMsg}</p>}
         </section>
 
         <label className="flex items-center gap-4 mb-4 cursor-pointer">
