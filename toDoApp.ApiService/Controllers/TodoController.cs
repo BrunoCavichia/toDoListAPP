@@ -96,5 +96,19 @@ namespace toDoApp.ApiService.Controllers // define el ambito logico en donde viv
 
             return NoContent();
         }
+
+        [HttpPut("toggle-all")]
+        public async Task<IActionResult> ToggleAllTodo([FromBody] bool isCompleted)
+        {
+            var todos = _context.TodoItems.ToList();
+
+            foreach (var todo in todos)
+            {
+                todo.IsCompleted = isCompleted;
+            }
+
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }

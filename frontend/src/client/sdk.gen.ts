@@ -2,7 +2,7 @@
 
 import type { Client, Options as Options2, TDataShape } from './client';
 import { client } from './client.gen';
-import type { DeleteTodoByIdData, DeleteTodoByIdResponses, GetTodoByIdData, GetTodoByIdResponses, GetTodoData, GetTodoResponses, GetWeatherForecastData, GetWeatherForecastResponses, PostTodoData, PostTodoResponses, PutTodoByIdData, PutTodoByIdResponses } from './types.gen';
+import type { DeleteTodoByIdData, DeleteTodoByIdResponses, GetTodoByIdData, GetTodoByIdResponses, GetTodoData, GetTodoResponses, PostTodoData, PostTodoResponses, PutTodoByIdData, PutTodoByIdResponses, PutTodoToggleAllData, PutTodoToggleAllResponses } from './types.gen';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean> = Options2<TData, ThrowOnError> & {
     /**
@@ -16,13 +16,6 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
      * used to access values that aren't defined as part of the SDK function.
      */
     meta?: Record<string, unknown>;
-};
-
-export const getWeatherForecast = <ThrowOnError extends boolean = false>(options?: Options<GetWeatherForecastData, ThrowOnError>) => {
-    return (options?.client ?? client).get<GetWeatherForecastResponses, unknown, ThrowOnError>({
-        url: '/weatherforecast',
-        ...options
-    });
 };
 
 export const getTodo = <ThrowOnError extends boolean = false>(options?: Options<GetTodoData, ThrowOnError>) => {
@@ -60,6 +53,17 @@ export const getTodoById = <ThrowOnError extends boolean = false>(options: Optio
 export const putTodoById = <ThrowOnError extends boolean = false>(options: Options<PutTodoByIdData, ThrowOnError>) => {
     return (options.client ?? client).put<PutTodoByIdResponses, unknown, ThrowOnError>({
         url: '/Todo/{id}',
+        ...options,
+        headers: {
+            'Content-Type': 'application/json',
+            ...options.headers
+        }
+    });
+};
+
+export const putTodoToggleAll = <ThrowOnError extends boolean = false>(options: Options<PutTodoToggleAllData, ThrowOnError>) => {
+    return (options.client ?? client).put<PutTodoToggleAllResponses, unknown, ThrowOnError>({
+        url: '/Todo/toggle-all',
         ...options,
         headers: {
             'Content-Type': 'application/json',

@@ -3,8 +3,8 @@
 import { type DefaultError, queryOptions, type UseMutationOptions } from '@tanstack/react-query';
 
 import { client } from '../client.gen';
-import { deleteTodoById, getTodo, getTodoById, getWeatherForecast, type Options, postTodo, putTodoById } from '../sdk.gen';
-import type { DeleteTodoByIdData, GetTodoByIdData, GetTodoData, GetWeatherForecastData, PostTodoData, PutTodoByIdData } from '../types.gen';
+import { deleteTodoById, getTodo, getTodoById, type Options, postTodo, putTodoById, putTodoToggleAll } from '../sdk.gen';
+import type { DeleteTodoByIdData, GetTodoByIdData, GetTodoData, PostTodoData, PutTodoByIdData, PutTodoToggleAllData } from '../types.gen';
 
 export type QueryKey<TOptions extends Options> = [
     Pick<TOptions, 'baseUrl' | 'body' | 'headers' | 'path' | 'query'> & {
@@ -41,23 +41,6 @@ const createQueryKey = <TOptions extends Options>(id: string, options?: TOptions
     ];
 };
 
-export const getWeatherForecastQueryKey = (options?: Options<GetWeatherForecastData>) => createQueryKey('getWeatherForecast', options);
-
-export const getWeatherForecastOptions = (options?: Options<GetWeatherForecastData>) => {
-    return queryOptions({
-        queryFn: async ({ queryKey, signal }) => {
-            const { data } = await getWeatherForecast({
-                ...options,
-                ...queryKey[0],
-                signal,
-                throwOnError: true
-            });
-            return data;
-        },
-        queryKey: getWeatherForecastQueryKey(options)
-    });
-};
-
 export const getTodoQueryKey = (options?: Options<GetTodoData>) => createQueryKey('getTodo', options);
 
 export const getTodoOptions = (options?: Options<GetTodoData>) => {
@@ -84,7 +67,7 @@ export const postTodoMutation = (options?: Partial<Options<PostTodoData>>): UseM
                 throwOnError: true
             });
             return data;
-        } 
+        }
     };
     return mutationOptions;
 };
@@ -124,6 +107,20 @@ export const putTodoByIdMutation = (options?: Partial<Options<PutTodoByIdData>>)
     const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<PutTodoByIdData>> = {
         mutationFn: async (fnOptions) => {
             const { data } = await putTodoById({
+                ...options,
+                ...fnOptions,
+                throwOnError: true
+            });
+            return data;
+        }
+    };
+    return mutationOptions;
+};
+
+export const putTodoToggleAllMutation = (options?: Partial<Options<PutTodoToggleAllData>>): UseMutationOptions<unknown, DefaultError, Options<PutTodoToggleAllData>> => {
+    const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<PutTodoToggleAllData>> = {
+        mutationFn: async (fnOptions) => {
+            const { data } = await putTodoToggleAll({
                 ...options,
                 ...fnOptions,
                 throwOnError: true

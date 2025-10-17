@@ -11,29 +11,6 @@ export type TodoItem = {
     createdAt?: string;
 };
 
-export type WeatherForecast = {
-    date: string;
-    temperatureC: number;
-    summary: string | null;
-    temperatureF?: number;
-};
-
-export type GetWeatherForecastData = {
-    body?: never;
-    path?: never;
-    query?: never;
-    url: '/weatherforecast';
-};
-
-export type GetWeatherForecastResponses = {
-    /**
-     * OK
-     */
-    200: Array<WeatherForecast>;
-};
-
-export type GetWeatherForecastResponse = GetWeatherForecastResponses[keyof GetWeatherForecastResponses];
-
 export type GetTodoData = {
     body?: never;
     path?: never;
@@ -108,6 +85,20 @@ export type PutTodoByIdData = {
 };
 
 export type PutTodoByIdResponses = {
+    /**
+     * OK
+     */
+    200: unknown;
+};
+
+export type PutTodoToggleAllData = {
+    body: boolean;
+    path?: never;
+    query?: never;
+    url: '/Todo/toggle-all';
+};
+
+export type PutTodoToggleAllResponses = {
     /**
      * OK
      */

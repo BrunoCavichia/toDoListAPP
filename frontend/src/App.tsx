@@ -7,7 +7,7 @@ import {
   postTodoMutation,
   putTodoByIdMutation,
 } from "./client/@tanstack/react-query.gen";
-import type { TodoItem } from "./client";
+import { putTodoToggleAll, type TodoItem } from "./client";
 
 function App() {
   const queryClient = useQueryClient();
@@ -43,6 +43,12 @@ function App() {
   // MUTATION: Toggle completado
   const toggleTodoMutation = useMutation({
     ...putTodoByIdMutation(),
+    onSuccess: () =>
+      queryClient.invalidateQueries({ queryKey: getTodosOptionsQueryKey }),
+  });
+
+  const toggleAllTodoMutation = useMutation({
+    mutationFn: (options: { body: boolean }) => putTodoToggleAll(options),
     onSuccess: () =>
       queryClient.invalidateQueries({ queryKey: getTodosOptionsQueryKey }),
   });
@@ -91,24 +97,12 @@ function App() {
   };
 
   const handleToggleAll = () => {
-    // Determinar si al menos un todo NO está completado
     const shouldCompleteAll = todos.some((todo) => !todo.isCompleted);
 
-    // Iterar sobre todos los todos
-    todos.forEach((todo) => {
-      // Crear objeto con estado actualizado
-      const todoItemToUpdate: TodoItem = {
-        ...todo,
-        isCompleted: shouldCompleteAll, // si hay alguno incompleto, marcar todos; si todos completos, desmarcar todos
-      };
-
-      // Llamar a la mutación para cada todo
-      toggleTodoMutation.mutate({
-        path: { id: todo.id ?? 0 },
-        body: todoItemToUpdate,
-      });
-    });
+    toggleAllTodoMutation.mutate({ body: shouldCompleteAll });
   };
+
+  // Definición de la mutación usando el cliente generado
 
   if (isLoading) return <p className="text-center mt-10">Cargando...</p>;
   if (error)
